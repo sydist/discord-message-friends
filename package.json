@@ -3,6 +3,7 @@
   "description": "A macro that dms all your friends something at the same time.",
   "license": "MIT",
   "main": "index.js",
+  "type": "module",
   "name": "discord-msg-friends-macro",
   "repository": "sydist/discord-msg-friends-macro",
   "scripts": {},
