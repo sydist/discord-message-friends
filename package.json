@@ -1,0 +1,10 @@
+{
+  "author": "sydist",
+  "description": "A macro that dms all your friends something at the same time.",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "discord-msg-friends-macro",
+  "repository": "sydist/discord-msg-friends-macro",
+  "scripts": {},
+  "version": "0.1.0"
+}
