@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-// Loads .env file contents into process.env.
 import { config } from "dotenv";
 config();
 
@@ -13,6 +12,9 @@ const FRIENDS = await fetch("https://discord.com/api/v9/users/@me/relationships"
 
 for (const FRIEND of FRIENDS)
 {
+    const IGNORED_USERS = process.env.IGNORE.split(" ");
+    if (IGNORED_USERS.includes(FRIEND.id)) 
+        continue;
 
     const MESSAGE = process.argv.slice(2)[0].replaceAll("{name}", FRIEND.user.username);
     fetch(`https://discord.com/api/v9/channels/${FRIEND.id}/messages`,
